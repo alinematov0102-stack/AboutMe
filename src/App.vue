@@ -282,6 +282,15 @@
         >
           {{ project.linkLabel }}
         </a>
+        <a
+          v-if="project.link2"
+          :href="project.link2"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:underline mt-2 text-green-600 font-bold text-left"
+        >
+          {{ project.linkLabel2 }}
+        </a>
       </div>
     </div>
 
@@ -486,6 +495,7 @@ const techStack = [
   "Bootstrap",
   "Git",
   "Tailwind CSS",
+  "JavaScript",
 ];
 
 /* ============ THEME LOGIC ============ */
@@ -570,14 +580,14 @@ const translations = reactive({
     hero: {
       greeting: "Salom, men",
       role: "Fullstack Dasturchi",
-      bio: "2+ yillik fullstack tajribaga ega dasturchi. Startaplar va yirik kompaniyalar uchun zamonaviy, foydalanuvchilarga qulay web ilovalar yarataman.",
+      bio: "2+ yillik fullstack tajribaga ega dasturchi. Bog'cha, avtomobil xizmati va restoran kabi real biznes uchun Vue 3, PHP va MySQL asosida zamonaviy web tizimlar yarataman.",
       btnProjects: "Loyihalarimni ko'rish",
       btnContact: "Bog'lanish",
     },
     about: {
       title: "Men haqimda",
-      p1: "Men Muhammad Ali — 2+ yillik tajribaga ega Fullstack dasturchiman. Vue 3, React, PHP, Java kabi texnologiyalarda ishlayman va production darajasidagi to'liq stack (fullstack) web ilovalarni yaratishga ixtisoslashganman.",
-      p2: "Hozirda turli startaplar va kompaniyalar bilan hamkorlik qilib, ularning g'oyalarini hayotga tatbiq etishda yordam beraman. Shu bilan birga, IT-LINE Academy'da frontend yo'nalishi bo'yicha talaba sifatida bilimimni chuqurlashtirmoqdaman. Kelajakda backend tomoniga ham chuqur o'sishni maqsad qilganman: hozirda backend texnologiyalarini asoslaridan boshlab o'rganib boryapman.",
+      p1: "Men Muhammad Ali — 2+ yillik tajribaga ega Fullstack dasturchiman. Vue 3, React, PHP, MySQL va Java texnologiyalarida ishlayman. Real biznes uchun to'liq (fullstack) web tizimlar yarataman: bog'cha boshqaruv tizimi, avtomobil xizmati ilovasi, 3D elementli restoran sayti va admin panel.",
+      p2: "Hozirda turli startaplar va kompaniyalar bilan hamkorlik qilib, ularning g'oyalarini hayotga tatbiq etishda yordam beraman. Loyihalarimda foydalanuvchi uchun qulay interfeys bilan birga admin panel va ma'lumotlar bazasi bilan ishlashga ham alohida e'tibor beraman. Shu bilan birga IT-LINE Academy'da frontend yo'nalishi bo'yicha bilimimni chuqurlashtirib, backend texnologiyalarini ham o'rganib boryapman.",
       techTitle: "Ishlaydigan texnologiyalarim:",
     },
     experience: {
@@ -613,6 +623,44 @@ const translations = reactive({
       items: [
         {
           id: 1,
+          name: "Bog'cha",
+          badge: "SHAXSIY",
+          image:
+            "data:image/svg+xml;utf8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22640%22%20height=%22416%22%20viewBox=%220%200%20640%20416%22%3E%3Cdefs%3E%3ClinearGradient%20id=%22g%22%20x1=%220%22%20y1=%220%22%20x2=%221%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%232f8cff%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%236ac1ff%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width=%22640%22%20height=%22416%22%20fill=%22url(%23g)%22/%3E%3Ctext%20x=%22320%22%20y=%22190%22%20font-size=%22110%22%20text-anchor=%22middle%22%3E%F0%9F%A7%B8%3C/text%3E%3Ctext%20x=%22320%22%20y=%22285%22%20font-size=%2240%22%20font-weight=%22700%22%20fill=%22%23ffffff%22%20text-anchor=%22middle%22%20font-family=%22Arial,sans-serif%22%3EBog'cha%3C/text%3E%3C/svg%3E",
+          description:
+            "Bog'cha ishini raqamlashtiruvchi boshqaruv tizimi: bolalar, guruhlar va kundalik ma'lumotlarni bir joydan yuritish. Mobil qurilmalarga moslashgan.",
+          tech: ["Vue 3", "JavaScript", "Tailwind CSS"],
+          link: "https://bogcha-system.vercel.app/",
+          linkLabel: "Jonli ko'rish",
+        },
+        {
+          id: 2,
+          name: "710 Samamoyka",
+          badge: "SHAXSIY",
+          image:
+            "data:image/svg+xml;utf8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22640%22%20height=%22416%22%20viewBox=%220%200%20640%20416%22%3E%3Cdefs%3E%3ClinearGradient%20id=%22g%22%20x1=%220%22%20y1=%220%22%20x2=%221%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%230b7cff%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%230b3d91%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width=%22640%22%20height=%22416%22%20fill=%22url(%23g)%22/%3E%3Ctext%20x=%22320%22%20y=%22190%22%20font-size=%22110%22%20text-anchor=%22middle%22%3E%F0%9F%9A%97%3C/text%3E%3Ctext%20x=%22320%22%20y=%22285%22%20font-size=%2240%22%20font-weight=%22700%22%20fill=%22%23ffffff%22%20text-anchor=%22middle%22%20font-family=%22Arial,sans-serif%22%3E710%20Samamoyka%3C/text%3E%3C/svg%3E",
+          description:
+            "Avtomobil xizmati uchun web ilova: tizimga kirish, yorug'/qorong'u rejim va telefonda qulay ishlaydigan interfeys.",
+          tech: ["Vue 3", "JavaScript", "Tailwind CSS"],
+          link: "https://710-samamoyka.vercel.app/",
+          linkLabel: "Jonli ko'rish",
+        },
+        {
+          id: 3,
+          name: "Restoran 3D",
+          badge: "SHAXSIY",
+          image:
+            "data:image/svg+xml;utf8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22640%22%20height=%22416%22%20viewBox=%220%200%20640%20416%22%3E%3Cdefs%3E%3ClinearGradient%20id=%22g%22%20x1=%220%22%20y1=%220%22%20x2=%221%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%23f97316%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%23b91c1c%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width=%22640%22%20height=%22416%22%20fill=%22url(%23g)%22/%3E%3Ctext%20x=%22320%22%20y=%22190%22%20font-size=%22110%22%20text-anchor=%22middle%22%3E%F0%9F%8D%BD%EF%B8%8F%3C/text%3E%3Ctext%20x=%22320%22%20y=%22285%22%20font-size=%2240%22%20font-weight=%22700%22%20fill=%22%23ffffff%22%20text-anchor=%22middle%22%20font-family=%22Arial,sans-serif%22%3ERestoran%203D%3C/text%3E%3C/svg%3E",
+          description:
+            "3D elementli restoran web-sayti va PHP asosidagi admin panel. Admin orqali kontentni boshqarish mumkin.",
+          tech: ["PHP", "MySQL", "3D"],
+          link: "https://restoran3d-1.onrender.com",
+          linkLabel: "Jonli ko'rish",
+          link2: "https://restoran3d-1.onrender.com/admin/login.php",
+          linkLabel2: "Admin panel",
+        },
+        {
+          id: 4,
           name: "Xarajat",
           badge: "STARTUP",
           image:
@@ -624,7 +672,7 @@ const translations = reactive({
           linkLabel: "Jonli ko'rish",
         },
         {
-          id: 2,
+          id: 5,
           name: "Calculator",
           badge: "STARTUP",
           image:
@@ -636,7 +684,7 @@ const translations = reactive({
           linkLabel: "Jonli ko'rish",
         },
         {
-          id: 3,
+          id: 6,
           name: "To-do-List",
           badge: "STARTUP",
           image:
@@ -648,7 +696,7 @@ const translations = reactive({
           linkLabel: "Jonli ko'rish",
         },
         {
-          id: 4,
+          id: 7,
           name: "Movie.com",
           badge: "SHAXSIY",
           image:
@@ -660,7 +708,7 @@ const translations = reactive({
           linkLabel: "Jonli ko'rish",
         },
         {
-          id: 5,
+          id: 8,
           name: "Dukon",
           badge: "SHAXSIY",
           image:
@@ -724,14 +772,14 @@ const translations = reactive({
     hero: {
       greeting: "Привет, я",
       role: "Fullstack Разработчик",
-      bio: "Разработчик с 2+ годами опыта в fullstack-разработке. Создаю современные, удобные веб-приложения для стартапов и крупных компаний.",
+      bio: "Разработчик с 2+ годами опыта в fullstack-разработке. Создаю современные веб-системы на Vue 3, PHP и MySQL для реального бизнеса: детских садов, автосервиса и ресторанов.",
       btnProjects: "Смотреть проекты",
       btnContact: "Связаться",
     },
     about: {
       title: "Обо мне",
-      p1: "Я Мухаммад Али — Fullstack разработчик с опытом более 2 лет. Работаю с такими технологиями, как Vue 3, React, PHP, Java, специализируюсь на создании полноценных (fullstack) веб-приложений production-уровня.",
-      p2: "Сейчас сотрудничаю с различными стартапами и компаниями, помогая воплощать их идеи в жизнь. Также обучаюсь на направлении Frontend в IT-LINE Academy, углубляя свои знания. В будущем планирую развиваться и в сторону backend: сейчас изучаю основы backend-технологий.",
+      p1: "Я Мухаммад Али — Fullstack разработчик с опытом более 2 лет. Работаю с Vue 3, React, PHP, MySQL и Java. Создаю полноценные (fullstack) веб-системы для реального бизнеса: систему управления детским садом, приложение для автосервиса, сайт ресторана с 3D-элементами и админ-панель.",
+      p2: "Сейчас сотрудничаю с различными стартапами и компаниями, помогая воплощать их идеи в жизнь. В своих проектах уделяю внимание не только удобному интерфейсу, но и админ-панели и работе с базой данных. Также учусь на направлении Frontend в IT-LINE Academy и параллельно изучаю backend-технологии.",
       techTitle: "Технологии, с которыми я работаю:",
     },
     experience: {
@@ -767,6 +815,44 @@ const translations = reactive({
       items: [
         {
           id: 1,
+          name: "Bog'cha",
+          badge: "ЛИЧНЫЙ",
+          image:
+            "data:image/svg+xml;utf8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22640%22%20height=%22416%22%20viewBox=%220%200%20640%20416%22%3E%3Cdefs%3E%3ClinearGradient%20id=%22g%22%20x1=%220%22%20y1=%220%22%20x2=%221%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%232f8cff%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%236ac1ff%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width=%22640%22%20height=%22416%22%20fill=%22url(%23g)%22/%3E%3Ctext%20x=%22320%22%20y=%22190%22%20font-size=%22110%22%20text-anchor=%22middle%22%3E%F0%9F%A7%B8%3C/text%3E%3Ctext%20x=%22320%22%20y=%22285%22%20font-size=%2240%22%20font-weight=%22700%22%20fill=%22%23ffffff%22%20text-anchor=%22middle%22%20font-family=%22Arial,sans-serif%22%3EBog'cha%3C/text%3E%3C/svg%3E",
+          description:
+            "Система управления детским садом: дети, группы и ежедневные данные в одном месте. Адаптирована под мобильные устройства.",
+          tech: ["Vue 3", "JavaScript", "Tailwind CSS"],
+          link: "https://bogcha-system.vercel.app/",
+          linkLabel: "Смотреть онлайн",
+        },
+        {
+          id: 2,
+          name: "710 Samamoyka",
+          badge: "ЛИЧНЫЙ",
+          image:
+            "data:image/svg+xml;utf8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22640%22%20height=%22416%22%20viewBox=%220%200%20640%20416%22%3E%3Cdefs%3E%3ClinearGradient%20id=%22g%22%20x1=%220%22%20y1=%220%22%20x2=%221%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%230b7cff%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%230b3d91%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width=%22640%22%20height=%22416%22%20fill=%22url(%23g)%22/%3E%3Ctext%20x=%22320%22%20y=%22190%22%20font-size=%22110%22%20text-anchor=%22middle%22%3E%F0%9F%9A%97%3C/text%3E%3Ctext%20x=%22320%22%20y=%22285%22%20font-size=%2240%22%20font-weight=%22700%22%20fill=%22%23ffffff%22%20text-anchor=%22middle%22%20font-family=%22Arial,sans-serif%22%3E710%20Samamoyka%3C/text%3E%3C/svg%3E",
+          description:
+            "Веб-приложение для автосервиса: вход в систему, светлая/тёмная тема и удобный интерфейс на телефоне.",
+          tech: ["Vue 3", "JavaScript", "Tailwind CSS"],
+          link: "https://710-samamoyka.vercel.app/",
+          linkLabel: "Смотреть онлайн",
+        },
+        {
+          id: 3,
+          name: "Restoran 3D",
+          badge: "ЛИЧНЫЙ",
+          image:
+            "data:image/svg+xml;utf8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22640%22%20height=%22416%22%20viewBox=%220%200%20640%20416%22%3E%3Cdefs%3E%3ClinearGradient%20id=%22g%22%20x1=%220%22%20y1=%220%22%20x2=%221%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%23f97316%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%23b91c1c%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width=%22640%22%20height=%22416%22%20fill=%22url(%23g)%22/%3E%3Ctext%20x=%22320%22%20y=%22190%22%20font-size=%22110%22%20text-anchor=%22middle%22%3E%F0%9F%8D%BD%EF%B8%8F%3C/text%3E%3Ctext%20x=%22320%22%20y=%22285%22%20font-size=%2240%22%20font-weight=%22700%22%20fill=%22%23ffffff%22%20text-anchor=%22middle%22%20font-family=%22Arial,sans-serif%22%3ERestoran%203D%3C/text%3E%3C/svg%3E",
+          description:
+            "Веб-сайт ресторана с 3D-элементами и админ-панель на PHP. Через админку можно управлять контентом.",
+          tech: ["PHP", "MySQL", "3D"],
+          link: "https://restoran3d-1.onrender.com",
+          linkLabel: "Смотреть онлайн",
+          link2: "https://restoran3d-1.onrender.com/admin/login.php",
+          linkLabel2: "Админ-панель",
+        },
+        {
+          id: 4,
           name: "Xarajat",
           badge: "СТАРТАП",
           image:
@@ -778,7 +864,7 @@ const translations = reactive({
           linkLabel: "Смотреть онлайн",
         },
         {
-          id: 2,
+          id: 5,
           name: "Calculator",
           badge: "СТАРТАП",
           image:
@@ -790,7 +876,7 @@ const translations = reactive({
           linkLabel: "Смотреть онлайн",
         },
         {
-          id: 3,
+          id: 6,
           name: "To-do-List",
           badge: "СТАРТАП",
           image:
@@ -802,7 +888,7 @@ const translations = reactive({
           linkLabel: "Смотреть онлайн",
         },
         {
-          id: 4,
+          id: 7,
           name: "Movie.com",
           badge: "ЛИЧНЫЙ",
           image:
@@ -814,7 +900,7 @@ const translations = reactive({
           linkLabel: "Смотреть онлайн",
         },
         {
-          id: 5,
+          id: 8,
           name: "Dukon",
           badge: "ЛИЧНЫЙ",
           image:
@@ -878,14 +964,14 @@ const translations = reactive({
     hero: {
       greeting: "Hi, I'm",
       role: "Fullstack Developer",
-      bio: "Developer with 2+ years of fullstack experience. I build modern, user-friendly web apps for startups and large companies.",
+      bio: "Developer with 2+ years of fullstack experience. I build modern web systems with Vue 3, PHP and MySQL for real businesses: kindergartens, car services and restaurants.",
       btnProjects: "View my projects",
       btnContact: "Get in touch",
     },
     about: {
       title: "About me",
-      p1: "I'm Muhammad Ali — a Fullstack developer with 2+ years of experience. I work with technologies such as Vue 3, React, PHP, and Java, and specialize in building full-stack, production-grade web applications.",
-      p2: "I currently collaborate with various startups and companies, helping bring their ideas to life. I'm also a Frontend student at IT-LINE Academy, deepening my knowledge there. In the future I plan to grow into backend development as well — I'm currently learning backend fundamentals.",
+      p1: "I'm Muhammad Ali — a Fullstack developer with 2+ years of experience. I work with Vue 3, React, PHP, MySQL and Java, and build full-stack web systems for real businesses: a kindergarten management system, a car service app, and a restaurant website with 3D elements and an admin panel.",
+      p2: "I currently collaborate with various startups and companies, helping bring their ideas to life. In my projects I care about a friendly user interface as much as the admin panel and database work behind it. I'm also a Frontend student at IT-LINE Academy and I'm learning backend technologies alongside.",
       techTitle: "Technologies I work with:",
     },
     experience: {
@@ -921,6 +1007,44 @@ const translations = reactive({
       items: [
         {
           id: 1,
+          name: "Bog'cha",
+          badge: "PERSONAL",
+          image:
+            "data:image/svg+xml;utf8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22640%22%20height=%22416%22%20viewBox=%220%200%20640%20416%22%3E%3Cdefs%3E%3ClinearGradient%20id=%22g%22%20x1=%220%22%20y1=%220%22%20x2=%221%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%232f8cff%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%236ac1ff%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width=%22640%22%20height=%22416%22%20fill=%22url(%23g)%22/%3E%3Ctext%20x=%22320%22%20y=%22190%22%20font-size=%22110%22%20text-anchor=%22middle%22%3E%F0%9F%A7%B8%3C/text%3E%3Ctext%20x=%22320%22%20y=%22285%22%20font-size=%2240%22%20font-weight=%22700%22%20fill=%22%23ffffff%22%20text-anchor=%22middle%22%20font-family=%22Arial,sans-serif%22%3EBog'cha%3C/text%3E%3C/svg%3E",
+          description:
+            "A kindergarten management system: children, groups and daily data in one place. Optimized for mobile devices.",
+          tech: ["Vue 3", "JavaScript", "Tailwind CSS"],
+          link: "https://bogcha-system.vercel.app/",
+          linkLabel: "View live",
+        },
+        {
+          id: 2,
+          name: "710 Samamoyka",
+          badge: "PERSONAL",
+          image:
+            "data:image/svg+xml;utf8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22640%22%20height=%22416%22%20viewBox=%220%200%20640%20416%22%3E%3Cdefs%3E%3ClinearGradient%20id=%22g%22%20x1=%220%22%20y1=%220%22%20x2=%221%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%230b7cff%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%230b3d91%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width=%22640%22%20height=%22416%22%20fill=%22url(%23g)%22/%3E%3Ctext%20x=%22320%22%20y=%22190%22%20font-size=%22110%22%20text-anchor=%22middle%22%3E%F0%9F%9A%97%3C/text%3E%3Ctext%20x=%22320%22%20y=%22285%22%20font-size=%2240%22%20font-weight=%22700%22%20fill=%22%23ffffff%22%20text-anchor=%22middle%22%20font-family=%22Arial,sans-serif%22%3E710%20Samamoyka%3C/text%3E%3C/svg%3E",
+          description:
+            "A web app for a car service: user login, light/dark mode and a phone-friendly interface.",
+          tech: ["Vue 3", "JavaScript", "Tailwind CSS"],
+          link: "https://710-samamoyka.vercel.app/",
+          linkLabel: "View live",
+        },
+        {
+          id: 3,
+          name: "Restoran 3D",
+          badge: "PERSONAL",
+          image:
+            "data:image/svg+xml;utf8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22640%22%20height=%22416%22%20viewBox=%220%200%20640%20416%22%3E%3Cdefs%3E%3ClinearGradient%20id=%22g%22%20x1=%220%22%20y1=%220%22%20x2=%221%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%23f97316%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%23b91c1c%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width=%22640%22%20height=%22416%22%20fill=%22url(%23g)%22/%3E%3Ctext%20x=%22320%22%20y=%22190%22%20font-size=%22110%22%20text-anchor=%22middle%22%3E%F0%9F%8D%BD%EF%B8%8F%3C/text%3E%3Ctext%20x=%22320%22%20y=%22285%22%20font-size=%2240%22%20font-weight=%22700%22%20fill=%22%23ffffff%22%20text-anchor=%22middle%22%20font-family=%22Arial,sans-serif%22%3ERestoran%203D%3C/text%3E%3C/svg%3E",
+          description:
+            "A restaurant website with 3D elements and a PHP-based admin panel for managing the content.",
+          tech: ["PHP", "MySQL", "3D"],
+          link: "https://restoran3d-1.onrender.com",
+          linkLabel: "View live",
+          link2: "https://restoran3d-1.onrender.com/admin/login.php",
+          linkLabel2: "Admin panel",
+        },
+        {
+          id: 4,
           name: "Xarajat",
           badge: "STARTUP",
           image:
@@ -932,7 +1056,7 @@ const translations = reactive({
           linkLabel: "View live",
         },
         {
-          id: 2,
+          id: 5,
           name: "Calculator",
           badge: "STARTUP",
           image:
@@ -944,7 +1068,7 @@ const translations = reactive({
           linkLabel: "View live",
         },
         {
-          id: 3,
+          id: 6,
           name: "To-do-List",
           badge: "STARTUP",
           image:
@@ -956,7 +1080,7 @@ const translations = reactive({
           linkLabel: "View live",
         },
         {
-          id: 4,
+          id: 7,
           name: "Movie.com",
           badge: "PERSONAL",
           image:
@@ -968,7 +1092,7 @@ const translations = reactive({
           linkLabel: "View live",
         },
         {
-          id: 5,
+          id: 8,
           name: "Dukon",
           badge: "PERSONAL",
           image:
